@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <!-- <script src="js/metodos.js"></script>-->
+    <title>Formularios</title>
+    <link href="css/estilos.css" rel="stylesheet">
+    <script src="js/metodos.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light mb-4" id="barraNav">
+        <a href="index.html" id="logoBookStop">
+            <img src="img/logo.png" alt="logoBookStop" width="40px">VerdiTown
+        </a>
+            <!-- botón hamburguesa -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Quiénes somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contactenos</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </nav>
+        <div class="container">
+            <form id="mi-formulario" method="post">
+                <form action="#" method="post" name="datos">
+                    <div class="form-group">
+                        <label for="rut">Rut: </label>
+                        <input type="text" id="rut" name="rut" placeholder="Digite su rut.."
+                         required class="form-control" minlength="10"
+                         onmousemove="colorFondo(this)" onmouseout="colorBlanco(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="nom">Nombre: </label>
+                        <input type="text" id="nom" name="nom" placeholder="Digite su nombre.."
+                         required class="form-control" minlength="3" onchange="upperText(this)"
+                         onmousemove="colorFondo(this)" onmouseout="colorBlanco(this)">
+                    </div>
+                <div class="form-group">
+                    <label for="correo">Correo de Usuario: </label>
+                    <input type="text" id="correo" name="correo" required
+                        placeholder="Cachupin@dog.cl" class="form-control"
+                        onmousemove="colorFondo(this)" onmouseout="colorBlanco(this)">
+                </div>
+                <div class="form-group">
+                    <label for="fono">Teléfono de Usuario: </label>
+                    <input type="number" id="fono" name="fono" required
+                        minlength="9"  class="form-control"
+                        onmousemove="colorFondo(this)" onmouseout="colorBlanco(this)">
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad: </label>
+                    <input type="number" id="edad" name="edad" placeholder="Digite su edad.."
+                     required class="form-control" min="14" max="110"
+                     onmousemove="colorFondo(this)" onmouseout="colorBlanco(this)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="genero">Género</label>
+                    <select id="genero" class="form-control">
+                        <option value="0">Seleccione género..</option>
+                        <option value="1">Mujer</option>
+                        <option value="2">Hombre</option>
+                        <option value="3">No especificar</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="tSoli">Tipo de solicitud</label>
+                    <select id="tSoli" class="form-control">
+                        <option value="0">Seleccione tipo..</option>
+                        <option value="1">Cotizacion</option>
+                        <option value="2">Compra</option>
+                        <option value="3">Distribudiora</option>
+                        <option value="4">Otra</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <input type="submit" value="Enviar" id="enviar"
+                        class="btn btn-success">
+                </div>
+    
+                <div class="form-group">
+                    <textarea id="carta" class="form-control" rows="7" onmousemove="colorFondo(this)" 
+                            onmouseout="colorBlanco(this)" readonly>
+    
+                    </textarea>
+                </div>
+    
+                <input type="button" value="Crear Carta" onclick="CrearCarta()" class="btn btn-success">
+                <input type="reset" value="Otro Ingreso" class="btn btn-warning"> 
+            </form>
+        </div>
+        <div id="error">
+
+        </div>
+         
+        <footer>
+            <div class="row col-12">
+                <div class="col-lg-2">
+                    <img src="img/logo.png" alt="logoBookStop" width="60px">
+                </div>
+                <div class="col-lg-1">
+                    <a href="index.html" id="linkFooter"><strong>INICIO</strong></a>
+                </div>
+                <div class="col-lg-1">
+                    <a href="galeria.html" id="linkFooter"><strong>Productos</strong></a>
+                </div>
+                <div class="col-lg-1">
+                    <a href="nosotros.html" id="linkFooter"><strong>Quienes somos</strong></a>
+                </div>
+                <div class="col-lg-1">
+                    <a href="contacto.html" id="linkFooter"><strong>Contactenos</strong></a>
+                </div>
+
+                <div class="col-lg-2">
+                    <strong>Síguenos</strong>
+                    <br><br>
+                    <div class="row">
+                        <img src="img/2000px-Facebook_font_awesome.svg.png" alt="" width="30px" height="30px"
+                            style=" margin-left: 15px;">
+                        <img src="img/twitter.png" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+                        <img src="img/Instagram.png" alt="" width="30px" height="30px" style=" margin-left: 10px;">
+    
+                    </div>
+                </div>
+    
+    
+                <div class="col-lg-3">
+    
+                    <strong>Contacto</strong>
+                    <br><br>
+                    <div class="row">
+                        <img src="img/location.png" alt="" width="20px" height="20px"
+                            style="margin-right: 10px; margin-left: 15px;">
+                        <p>Av. Esq. Blanca 501, Maipú</p>
+                    </div>
+                    <div class="row">
+                        <img src="img/fono.png" alt="" width="20px" height="20px"
+                            style="margin-right: 10px; margin-left: 15px;">
+                        <p>+56957737730</p>
+                    </div>
+                    <div class="row">
+                        <img src="img/email.png" alt="" width="20px" height="20px"
+                            style="margin-right: 10px; margin-left: 15px;">
+                        <p>consulta@verditown.cl</p>
+                    </div>
+                    <br><br><br>
+    
+                    <p>&copy; VerdiTown - 2023</p>
+                </div>
+            </div>
+        </footer>
+
+    <!-- script que permite mostrar/ocultar navbar haciendo scroll -->
+    <script type="text/javascript">
+        let ubicacionInicial = window.pageYOffset;
+        window.onscroll = function () {
+            let ubicacionPosterior = window.pageYOffset;
+            if (ubicacionInicial >= ubicacionPosterior) {
+                document.getElementById("barraNav").style.top = "0";
+            }
+            else {
+                document.getElementById("barraNav").style.top = "-70px";
+            }
+            ubicacionInicial = ubicacionPosterior
+        }
+    </script>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/validacion.js"></script>
+
+</html>
+<a href=""></a>
